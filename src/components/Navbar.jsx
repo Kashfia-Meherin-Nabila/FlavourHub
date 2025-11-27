@@ -14,6 +14,9 @@ const Navbar = () => {
           <Link href={"/about"}>About Us</Link>
         </li>
         <li>
+          <Link href={"/menu"}>Menu</Link>
+        </li>
+        <li>
           <Link href={"/shop"}>Shop</Link>
         </li>
         <li>
@@ -30,7 +33,7 @@ const Navbar = () => {
     <div className="body">
       {/* navbar */}
 
-      <div className="navbar bg-[#f1faee] shadow-sm ">
+      <div className="navbar  shadow-sm ">
         <div className="navbar-start ">
           <div className="dropdown ">
             <div tabIndex={0} role="button" className=" lg:hidden">
