@@ -4,3 +4,13 @@
 body {
   background-color: #f1faee;
 }
+
+:root {
+  font-family: var(--font-poppins);
+}
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+.font-playfair {
+  font-family: var(--font-playfair);
+}

@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
-
+import { playfair } from "@/app/layout";
+import Image from "next/image";
 
 const Navbar = () => {
-
-   const navMenu = () => {
-    return(
-      <>       
+  const navMenu = () => {
+    return (
+      <>
         <li>
           <Link href={"/"}>Home</Link>
         </li>
@@ -23,7 +23,8 @@ const Navbar = () => {
           <Link href={"/contact"}>Contact</Link>
         </li>
       </>
-    )}
+    );
+  };
 
   return (
     <div className="body">
@@ -50,21 +51,30 @@ const Navbar = () => {
               </svg>
             </div>
 
-              <ul
-        tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          {navMenu()}
-        </ul> 
+            <ul
+              tabIndex="-1"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              {navMenu()}
+            </ul>
           </div>
-          <Link href={"/"} className=" text-xl">FlavourHub</Link>
+          <div>
+            <Image
+              src="/assets/logo.jpg"
+              alt="logo"
+              width={50}
+              height={50}
+            />
+          </div>
+          <Link href={"/"} className={`${playfair.className} text-3xl`}>FlavourHub</Link>
         </div>
         <div className="navbar-center hidden lg:flex body">
-          <ul className="menu menu-horizontal px-1">
-            {navMenu()}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{navMenu()}</ul>
         </div>
         <div className="navbar-end">
-          <Link href={"/contact"} className="btn btn-outline">Appointment</Link>
+          <Link href={"/contact"} className="btn btn-outline">
+            Appointment
+          </Link>
         </div>
       </div>
     </div>
